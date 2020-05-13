@@ -137,6 +137,6 @@ LOGGING = {
     "disable_existing_loggers": True,
     "handlers": {"console": {"class": "logging.StreamHandler", "formatter": "json"}},
     "formatters": {"json": {"()": JsonFormatter}},
-    "root": {"handlers": ["console"], "level": "WARNING"},
+    "root": {"handlers": ["console"], "level": "INFO"},
     "loggers": {"django": _logger_conf, "welcome": _logger_conf},
 }

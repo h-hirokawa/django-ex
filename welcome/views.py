@@ -16,7 +16,7 @@ def index(request):
     hostname = os.getenv("HOSTNAME", "unknown")
     PageView.objects.create(hostname=hostname)
     print("print debug")
-    logger.info("info log message")
+    logger.info({'message': 'log message', 'level': "info"})
     return render(
         request,
         "welcome/index.html",
